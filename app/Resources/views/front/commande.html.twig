@@ -1,0 +1,68 @@
+{% block title %}commande {% endblock %}
+{% extends 'base-page.html.twig' %}
+{% block body %}
+
+
+
+<section id="cart_items">
+		<div class="container">
+			<div class="breadcrumbs">
+			</div>
+             <br><br><br>
+			<div class="step-one">
+				<h2 class="heading"> </h2>
+			</div>
+			<section id="form">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="signup-form">
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
+				Billing Address</h3>
+			
+			<form action="payment.html" method="post" class="creditly-card-form agileinfo_form">
+						<div class="creditly-wrapper wthree, w3_agileits_wrapper">
+							<div class="information-wrapper">
+								<div class="first-row">
+									<div class="controls form-group">
+										<input class="billing-address-name form-control" type="text" name="name" placeholder="Full Name" required="">
+									</div>
+									<div class="controls form-group">
+										<input class="billing-address-name form-control" type="email" name="name" placeholder="Email Adress " required="">
+									</div>
+									<div class="controls form-group">
+										<input class="billing-address-name form-control" type="text" name="name" placeholder="Adress" required="">
+									</div>
+									<div class="controls form-group">
+										<input type="text" class="form-control" placeholder="Town/City" name="city" required="">
+									</div>
+								
+								</div>
+								
+							</div>
+						</div>
+			</form>
+					<div class="checkout-right-basket">
+						<a href="{{path('payer')}}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">Make a Payment
+							<span class="far fa-hand-point-right"></span>
+						</a>
+					</div>
+
+		</div>
+	</section> 
+	
+
+
+
+
+
+
+
+
+{% endblock %}

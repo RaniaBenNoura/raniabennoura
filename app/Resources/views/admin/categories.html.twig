@@ -1,0 +1,69 @@
+{% block title %}liste categories {% endblock %}
+{% extends 'base-admin.html.twig' %}
+
+{% block body %}
+
+	<div class="navbar navbar-default">
+		<a class="navbar-brand" href="{{path('index')}}">RaniaAdmin</a>
+		<ul class="nav navbar-nav">
+			<li > <a href="{{path('index')}}">Accueil</a> </li>
+			<li class="active"> <a href="{{path('listecategories')}}">Catégories</a> </li>
+			<li> <a href="{{path('listeproduits')}}">Produits</a> </li>
+			<li> <a href="{{path('commande')}}">Commandes</a> </li>
+		</ul>
+        <div class="navbar-form navbar-right" style="margin-right: 5px;">
+				<a href="deconnexion.php" type="submit" class="btn btn-warning"><img src="../images/icons/logout.png" alt="IMG-LOGO" span class="glyphicon glyphicon-remove-circle"> </span> Log out</a>
+			</div>
+	</div>
+
+	<div class="container">
+
+		<h1 class="text-center">Liste des catégories</h1>
+
+       <table class="table table-striped">
+          <thead>
+            <tr>
+                <th>Id</th>
+              <th>Libelle</th>
+               <th>IMAGE</th>
+               <th>MODIFIER</th>
+               <th>SUPPRIMER</th>
+               <th>VOIR LE CATEGORIE</th>
+            </tr>
+           </thead>
+          <tbody id="resultat-diporama">
+               {% for category in categories %}
+
+               <tr>
+                <td><a href="{{ path('admin_categorie_show', { 'id': category.id }) }}">{{ category.id }}</a> </td>
+                <td>{{ category.libelle }}</td>
+                <td>{{ category.image }}</td>
+                 <td>
+                <a class="btn btn-primary" href="{{ path('admin_categorie_edit', { 'id': category.id }) }}">
+                    <img src="../images/icons/modif.png" alt="IMG-LOGO" span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Modifier
+                </a>
+                 </td>
+                <td>
+                <a href="#" class="btn btn-danger btn-mini">
+                    <img src="../images/icons/supp.png" alt="IMG-LOGO"     span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Supprimer
+                </a>
+                </td>
+                 <td>
+                <a class="btn btn-primary" href="{{ path('admin_categorie_show', { 'id': category.id }) }}">
+                    <img src="../images/icons/voir.png" alt="IMG-LOGO" span class="glyphicon glyphicon-edit" aria-hidden="true"></span> voir
+                </a>
+                 </td>
+              </tr>
+                {% endfor %}
+             </tbody>
+        </table>
+             <div class="navbar-form navbar-right" style="margin-right: 5px;"> 
+				<a href="{{ path('admin_categorie_new') }}" type="submit" class="btn btn-warning"><img src="../images/icons/new.png" alt="IMG-LOGO" span class="glyphicon glyphicon-remove-circle"> </span>Créer un nouveau  categorie</a>
+			</div>
+        
+	</div>
+
+
+	<script src="../js/jqueryy.js"></script>
+	<script src="../js/bootstrapp.min.js"></script>
+ {% endblock %}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}liste categorie{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="../css/bootstrapp.min.css" rel="stylesheet">
+    </head>
+
+
+{% block body %}
+
+
+	<div class="navbar navbar-default">
+		<a class="navbar-brand" href="{{path('index')}}">AdminRania</a>
+		<ul class="nav navbar-nav">
+			<li class="active"> <a href="{{path('index')}}">Accueil</a> </li>
+			<li> <a href="{{path('listecategories')}}">Catégoies</a> </li>
+			<li> <a href="{{path('listeproduits')}}">Produits</a> </li>
+			<li> <a href="{{path('commande')}}">Commandes</a> </li>
+		</ul>
+		<div class="navbar-form navbar-right" style="margin-right: 5px;">
+				<a href="deconnexion.php" type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-remove-circle"> </span> Log out</a>
+			</div>
+	</div>
+
+	<div class="container">
+
+
+
+
+		<h1 class="text-center">Tableau de bord</h1>
+
+		<ul class="list-group">
+			<li class="list-group-item">
+				Nombre des Catégoies 
+				<span class="badge"> </span>
+			</li>
+			<li class="list-group-item">
+				Nombre des Produits
+				<span class="badge">10</span>				
+			</li>
+			<li class="list-group-item">
+				Nombre des Commandes
+				<span class="badge">15</span>
+			</li>
+			<li class="list-group-item">
+				Montant total des Commandes
+				<span class="badge">15 TND</span>
+			</li>
+		</ul>
+	</div>
+
+
+	<script src="../js/jqueryy.js"></script>
+	<script src="../js/bootstrapp.min.js"></script>
+
+
+
+ {% endblock %}

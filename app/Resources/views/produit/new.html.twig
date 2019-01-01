@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Nouveau Produit{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="../css/bootstrapp.min.css" rel="stylesheet">
+    </head>
+
+{% block body %}
+
+<div class="navbar navbar-default">
+		<a class="navbar-brand" href="{{path('index')}}">AdminRania</a>
+		<ul class="nav navbar-nav">
+			<li> <a href="{{path('index')}}">Accueil</a> </li>
+			<li > <a href="{{path('listecategories')}}">Catégoies</a> </li>
+			<li class="active"> <a href="{{path('listeproduits')}}">Produits</a> </li>
+			<li> <a href="{{path('commande')}}">Commandes</a> </li>
+		</ul>
+		<div class="navbar-form navbar-right" style="margin-right: 5px;">
+				<a href="deconnexion.php" type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-remove-circle"> </span> Log out</a>
+			</div>
+	</div>
+
+	<div class="container">
+
+
+
+
+		<h1 class="text-center">Nouveau Produit</h1>
+
+
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input class="btn btn-primary" type="submit" value="Valider" />
+    {{ form_end(form) }}
+
+    <ul><br><br>
+         <li class="btn btn-primary"><a  class="btn btn-primary" href="{{ path('listeproduits') }}">
+                    Retour à la liste
+                </a>
+         </li>
+        
+    </ul>
+
+</div>
+    <script src="../js/jqueryy.js"></script>
+	<script src="../js/bootstrapp.min.js"></script>
+{% endblock %}

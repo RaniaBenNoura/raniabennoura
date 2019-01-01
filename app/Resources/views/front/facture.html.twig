@@ -1,0 +1,50 @@
+{% block title %}facture {% endblock %}
+{% extends 'base-page.html.twig' %}
+{% block body %}
+<br><br><br><br>
+<div class="container">
+		<div class="row">
+
+           
+				
+				<div class="span9">
+                    <h2>Factures</h2>
+                    <form>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Références</th>
+                                <th>Date</th>
+                                <th>Prix TTC</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">AB29837</a></td>
+                                <td>20/02/14</td>
+                                <td>333,33€</td>
+                                <td><a href="#"><i class="icon-refresh"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">AB29837</a></td>
+                                <td>20/02/14</td>
+                                <td>333,33€</td>
+                                <td><a href="#"><i class="icon-refresh"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+    <div class="checkout-right-basket">
+						<a href="{{path('facturepdf')}}" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">Download
+							<span class="far fa-hand-point-right"></span>
+						</a>
+			 </div>
+            </div>
+		
+		</div>
+	</div>
+
+
+
+{% endblock %}

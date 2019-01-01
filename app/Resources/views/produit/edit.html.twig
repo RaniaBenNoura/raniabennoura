@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Modifier{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="../css/bootstrapp.min.css" rel="stylesheet">
+    </head>
+
+{% block body %}
+
+    <div class="navbar navbar-default">
+		<a class="navbar-brand" href="{{path('index')}}">RaniaAdmin</a>
+		<ul class="nav navbar-nav">
+			<li > <a href="{{path('index')}}">Accueil</a> </li>
+			<li > <a href="{{path('listecategories')}}">Catégories</a> </li>
+			<li  class="active"> <a href="{{path('listeproduits')}}">Produits</a> </li>
+			<li> <a href="{{path('commande')}}">Commandes</a> </li>
+		</ul>
+        <div class="navbar-form navbar-right" style="margin-right: 5px;">
+				<a href="deconnexion.php" type="submit" class="btn btn-warning"> Log out</a>
+		</div>
+	</div>
+    <div class="container">
+
+		<h1 class="text-center">Modifier le Produit</h1>
+
+
+    
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <span class="glyphicon glyphicon-edit"><input  class="btn btn-primary" type="submit" value="Modifier" ></span>
+    {{ form_end(edit_form) }}
+
+  <ul><br>
+    <li class="btn btn-primary"><a class="btn btn-primary"  href="{{ path('listeproduits') }}">
+                    Retour à la liste
+                </a>
+    </li>
+        <br><br><br>
+    <li class="btn btn-primary">
+            {{ form_start(delete_form) }}
+                <span class="glyphicon glyphicon-remove-circle"><input class="btn btn-primary" type="submit" value="Supprimer"></span>
+            {{ form_end(delete_form) }}
+    </li>
+    </ul>
+
+</div> 
+    <script src="../js/jqueryy.js"></script>
+	<script src="../js/bootstrapp.min.js"></script>
+{% endblock %}
+

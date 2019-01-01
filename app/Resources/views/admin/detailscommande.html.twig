@@ -1,0 +1,82 @@
+{% block title %}Detail commande {% endblock %}
+{% extends 'base-admin.html.twig' %}
+
+{% block body %}
+	<table class="table">
+		<tr>
+			<td width="30px">
+				<img src="../images/icons/logo-03.png" alt="IMG-LOGO" />
+			</td>
+			<td>
+				<h3>Commande n° 999999</h3>
+				<h4>Du jj/mm/aaaa</h4>
+			</td>
+			<td>
+				<h5>Nom & Prénom client</h5>
+				<h5>adresse@email.com</h5>
+				<h5>Adresse postale</h4>
+			</td>
+		</tr>
+	</table>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Produit</th>
+				<th>PU</th>
+				<th>Qté</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody>
+		
+
+			<tr>
+				<td>999</td>
+				<td>Un produit</td>
+				<td>99</td>
+				<td>9</td>
+				<td>999.99</td>
+			</tr>
+			<tr>
+				<td>999</td>
+				<td>Un produit</td>
+				<td>99</td>
+				<td>9</td>
+				<td>999.99</td>
+			</tr>
+			<tr>
+				<td>999</td>
+				<td>Un produit</td>
+				<td>99</td>
+				<td>9</td>
+				<td>999.99</td>
+			</tr>
+
+
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>Total HT</td>
+				<td>999.99</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>Montant TVA 10%</td>
+				<td>999.99</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td><strong>Total TTC</strong></td>
+				<td><strong>999.99</strong></td>
+			</tr>
+		</tbody>
+	</table>
+ {% endblock %}
+
+

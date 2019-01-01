@@ -1,0 +1,54 @@
+{% block title %}Liste de commande {% endblock %}
+{% extends 'base-admin.html.twig' %}
+
+{% block body %}
+
+	<div class="navbar navbar-default">
+		<a class="navbar-brand" href="{{path('index')}}">RaniaAdmin</a>
+		<ul class="nav navbar-nav">
+			<li > <a href="{{path('index')}}">Accueil</a> </li>
+			<li > <a href="{{path('listecategories')}}">Catégories</a> </li>
+			<li > <a href="{{path('listeproduits')}}">Produits</a> </li>
+			<li class="active"> <a href="{{path('commande')}}">Commandes</a> </li>
+		</ul>
+        <div class="navbar-form navbar-right" style="margin-right: 5px;">
+				<a href="deconnexion.php" type="submit" class="btn btn-warning"><img src="../images/icons/logout.png" alt="IMG-LOGO" span class="glyphicon glyphicon-remove-circle"> </span> Log out</a>
+		</div>
+	</div>
+
+	<div class="container">
+
+		<h1 class="text-center">Liste des commandes</h1>
+
+       <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Date</th>
+            <th>Client</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="resultat-diporama">
+
+        <tr>
+            <td>999 </td>
+            <td>24/12/2018 </td>
+            <td>Foo BAR</td>
+
+            <td>
+                <a class="btn btn-primary" href="{{path('detailscommande')}}">
+                    <img src="../images/icons/imp.png" alt="IMG-LOGO" span class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimer
+                </a>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+        
+	</div>
+
+
+	<script src="../js/jqueryy.js"></script>
+	<script src="../js/bootstrapp.min.js"></script>
+ {% endblock %}
